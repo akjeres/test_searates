@@ -33,8 +33,18 @@ header p {
 @media (min-width: 649px) {
     header {
         height: 543px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
         justify-content: space-between;
     }
     header div.button_group_wrapper {
@@ -55,12 +65,18 @@ header p {
     color: #fff;
     font-size: 26px;
     text-align: center;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 input[type=checkbox]{
     display: none;
 }
 label{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     width: 59px;
@@ -104,6 +120,9 @@ ul.hidden_button li {
     width: 80px;
     height: 80px;
     cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #fff;
     box-shadow: 3px -3px 3px rgba(181,181,181, 0.5);
@@ -111,6 +130,9 @@ ul.hidden_button li {
 }
 li.call {
     background-color: rgb(0, 195, 255);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     /*top: -175px;*/
     z-index: 10;
@@ -131,6 +153,9 @@ li.dollar {
     box-shadow: 3px 3px 3px rgba(181,181,181, 0.5) !important;
     font-size: 40px;
     z-index: 8;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 i.fas.fa-dollar-sign::before {
@@ -145,8 +170,14 @@ input[type=checkbox]:checked ~ label {
     height: 59px;
 }
 input[type=checkbox]:checked ~ label span.button_span.top {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-top: 0;
+    -webkit-animation: clock-wise 0.25s ease-in-out;
+    -moz-animation: clock-wise 0.25s ease-in-out;
+    -ms-animation: clock-wise 0.25s ease-in-out;
     animation: clock-wise 0.25s ease-in-out;
     position: relative;
     top: 27px;
@@ -155,11 +186,18 @@ input[type=checkbox]:checked ~ label span.button_span.center {
     display: none;
 }
 input[type=checkbox]:checked ~ label span.button_span.bottom {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    -webkit-animation: counterclock-wise 0.25s ease-in-out;
+    -moz-animation: counterclock-wise 0.25s ease-in-out;
+    -ms-animation: counterclock-wise 0.25s ease-in-out;
     animation: counterclock-wise 0.25s ease-in-out;
     position: relative;
     top: 22px;
 }
+
 @keyframes counterclock-wise {
     from {
         transform: rotate(0deg);
@@ -189,6 +227,9 @@ input[type=checkbox]:checked ~ ul {
     display: none;
     font-size: 16px;
     padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
     border-radius: 4px;
     background-color: rgba(51, 51, 51, 0.5);
     position: absolute;
@@ -216,6 +257,9 @@ input[type=checkbox]:checked ~ ul {
 
 /*Quote Search*/
 div.quotation * {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
     border-radius: 0px;
 }
 div.quotation div.input-row, div.quotation button {
@@ -315,6 +359,9 @@ div.quotation button.change_values {
     font-size: 8px;
     font-weight: bold;
     border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     background-color: transparent;
     line-height: 8px;
@@ -541,6 +588,9 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
     background-color: #fe9518;
     color: #fff;
     font-size: 11px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
     border-radius: 0;
     padding: 10px 17px 8px 17px;
     margin-top: 2px;
@@ -604,9 +654,15 @@ div.dry_chartering_description {
 .owl-carousel_wrapper {
     width: 100%;
     background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     /*padding: 23px 0 19px 0;*/
     padding: 23px 25px 19px 12px;
+    -webkit-align-items: baseline;
+    -moz-align-items: baseline;
+    -ms-align-items: baseline;
     align-items: baseline;
     text-align: center;
 }
@@ -703,6 +759,9 @@ div.nearest_city  {
     height: 27px;
     width: 100%;
     border: 1px solid #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 .nearest_city {
@@ -823,8 +882,3 @@ footer div.copyrights {
     }
 }
 /*Footer*/
-
-.dummy {
-    width: 10px;
-    height: 1000px;
-}
