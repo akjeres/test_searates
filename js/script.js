@@ -70,10 +70,12 @@ $(document).ready(function() {
 			$(".change_values").css({
     			top: "-45px",
     			left: "-49px",
-    			padding: "0"
+    			padding: "0",
+    			width: "49px",
+    			height: "90px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test20");
+			alert("Test21");
 		}
 	}
 });
