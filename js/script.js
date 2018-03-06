@@ -72,10 +72,13 @@ $(document).ready(function() {
 			$(".change_values").css({
     			top: "-45px",
     			backgroundColor: "red",
-    			left: "20px"
+			});
+			$(".search-row .input-group-btn").css({
+				position: "relative",
+				left: "20px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test24");
+			alert("Test25");
 		}
 	}
 });
