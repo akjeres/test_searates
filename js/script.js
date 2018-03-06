@@ -51,8 +51,8 @@ $(document).ready(function() {
 		if (isRetina()) {
 			$(".dry_chartering_description p span").html("");
 			$(".change_values").css({
-				position: "absolute",
-    			right: 0
+    			left: ($(window).width() - 102) + "px",
+    			top: "-45px"
 			});
 		}
 		alert("Retina? " + isRetina());
