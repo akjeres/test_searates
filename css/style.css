@@ -818,10 +818,15 @@ div.nearest_city input::-webkit-input-placeholder {color:#000 !important;}
 div.nearest_city input::-moz-placeholder          {color:#000 !important;}
 div.nearest_city input:-moz-placeholder           {color:#000 !important;}
 div.nearest_city input:-ms-input-placeholder      {color:#000 !important;}
+.nearest_city input {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
 .nearest_city span.input-group-btn button {
     height: 28px;
     width: 31px;
-    border: none;
+    border: 0;
     background-color: #fff !important;
     font-size: 12px;
     padding-right: 10px;

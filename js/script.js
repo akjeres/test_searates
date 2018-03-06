@@ -41,10 +41,14 @@ function getScrollbarWidth() {
 var counter = 0;
 $(window).scroll(function() {
 	if ($(window).scrollTop() > 320) {
-		$(".dropup").fadeIn("slow");
+		if ($(".owl-carousel_wrapper").offset().top-26 - $(window).height()
+			&& $(".owl-carousel_wrapper").offset().top+222 - $(window).height()) {
+			$(".dropup").fadeIn("slow");
+		}
 	} else {
 		$(".dropup").fadeOut("fast");
 	}
+	console.log($(window).scrollTop());
 });
 $(document).ready(function() {
 	if ($(window).width() > 829) {
