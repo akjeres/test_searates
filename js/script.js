@@ -12,6 +12,17 @@ function isRetina() {
  
 	return false;
 };
+function isApple() {
+	var platform = navigator.platform;
+
+	if (platform == "MacIntel"
+		|| platform == "iPhone"
+		|| platform == "iPod"
+		|| platform == "iPad") {
+		return true;
+	}
+	else return false;
+}
 function getScrollbarWidth() {
   const outer = document.createElement('div');
   const inner = document.createElement('div');
@@ -48,14 +59,13 @@ $(document).ready(function() {
 	} else $(".dropup").fadeOut("fast");
 	if ($(window).width() < (650 - getScrollbarWidth())) {
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
-		if (isRetina()) {
+		if (isRetina() && isApple()) {
 			$(".dry_chartering_description p span").html("");
 			$(".change_values").css({
-    			left: ($(window).width() - 102) + "px",
+    			left: ($(window).width() - 204) + "px",
     			top: "-45px"
 			});
 		}
-		alert("Retina? " + isRetina());
 	}
 	if ($(window).width() > 550) {
 		$("header p span").html("<br/>");
