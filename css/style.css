@@ -419,23 +419,18 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
     left: 12px; 
    }
 }
-/*@media
+@media
    only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 649px),
    only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 649px),
    only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 649px),
    only screen and (        min-device-pixel-ratio: 2) and (max-width: 649px),
    only screen and (                min-resolution: 192dpi) and (max-width: 649px),
    only screen and (                min-resolution: 2dppx) and (max-width: 649px) { 
-   button.btn.btn-default.change_values {
-        position: static;
-        z-index: 100 !important;
-        height: 90px !important;
+   span.input-group-btn.mobileAppleButton:hover
+    {
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
    }
-   .more button svg.svg-inline--fa.fa-chevron-right {
-        left: -4px;
-        position: relative;
-    }
-}*/
+}
 /*Quote Search*/
 
 /*Articles Group*/
