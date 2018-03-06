@@ -422,14 +422,14 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    only screen and (        min-device-pixel-ratio: 2) and (max-width: 650px),
    only screen and (                min-resolution: 192dpi) and (max-width: 650px),
    only screen and (                min-resolution: 2dppx) and (max-width: 650px) { 
-      button.change_values {
+   button.btn.btn-default.change_values {
         position: absolute !important;
         right: 0px;
         z-index: 100 !important;
         height: 90px !important;
    }
    .more button svg.svg-inline--fa.fa-chevron-right {
-        left: -8px;
+        left: 1px;
         position: relative;
     }
 }
