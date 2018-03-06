@@ -71,7 +71,7 @@ $(document).ready(function() {
 			$(".change_values").css({
     			backgroundColor: "dummy",
     			top: "-45px",
-    			left: 102 + "px"
+    			left: "0"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
 			alert("Test16");
