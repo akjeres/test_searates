@@ -17,7 +17,7 @@ $(document).ready(function() {
 	if ($(window).scrollTop() > 320) {
 		$(".dropup").fadeIn("slow");
 	} else $(".dropup").fadeOut("fast");
-	if ($(window).width() < 635) {
+	if ($(window).width() < 635) { //has to be changed
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
 	}
 	if ($(window).width() > 550) {

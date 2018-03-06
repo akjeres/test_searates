@@ -146,6 +146,11 @@ i.fas.fa-phone::before {
     top: 22px;
     left: 26px;
 }
+svg.svg-inline--fa.fa-phone {
+    position: relative;
+    top: 22px;
+    left: 26px;
+}
 li.dollar {
     background-color: rgb(92, 184, 92);
     position: absolute;
@@ -163,6 +168,11 @@ i.fas.fa-dollar-sign::before {
     left: 26px;
     top: 12px;
  }
+svg.svg-inline--fa.fa-dollar-sign {
+    position: relative;
+    left: 26px;
+    top: 12px;
+}
 
 input[type=checkbox]:checked ~ label {
     background-color: #ff9115;
@@ -404,6 +414,17 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
     top: 55px;
     left: 12px; 
    }
+}
+@media
+   only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (   min--moz-device-pixel-ratio: 2),
+   only screen and (     -o-min-device-pixel-ratio: 2/1),
+   only screen and (        min-device-pixel-ratio: 2),
+   only screen and (                min-resolution: 192dpi),
+   only screen and (                min-resolution: 2dppx) { 
+      body {
+        display: none;
+    }
 }
 /*Quote Search*/
 
