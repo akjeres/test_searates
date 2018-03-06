@@ -38,6 +38,122 @@ function getScrollbarWidth() {
 
   return (widthWithoutScrollbar - widthWithScrollbar);
 }
+var BrowserDetect = { 
+  init: function () { 
+  this.browser = this.searchString(this.dataBrowser) || "An unknown browser"; 
+  this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version"; 
+  this.OS = this.searchString(this.dataOS) || "an unknown OS"; 
+  }, 
+  searchString: function (data) { 
+  for (var i=0;i<data.length;i++) { 
+  var dataString = data[i].string; 
+  var dataProp = data[i].prop; 
+  this.versionSearchString = data[i].versionSearch || data[i].identity; 
+  if (dataString) { 
+  if (dataString.indexOf(data[i].subString) != -1) 
+  return data[i].identity; 
+  } 
+  else if (dataProp) 
+  return data[i].identity; 
+  } 
+  }, 
+  searchVersion: function (dataString) { 
+  var index = dataString.indexOf(this.versionSearchString); 
+  if (index == -1) return; 
+  return parseFloat(dataString.substring(index+this.versionSearchString.length+1)); 
+  }, 
+  dataBrowser: [ 
+  { 
+  string: navigator.userAgent, 
+  subString: "Chrome", 
+  identity: "Chrome" 
+  }, 
+  { string: navigator.userAgent, 
+  subString: "OmniWeb", 
+  versionSearch: "OmniWeb/", 
+  identity: "OmniWeb" 
+  }, 
+  { 
+  string: navigator.vendor, 
+  subString: "Apple", 
+  identity: "Safari", 
+  versionSearch: "Version" 
+  }, 
+  { 
+  prop: window.opera, 
+  identity: "Opera", 
+  versionSearch: "Version" 
+  }, 
+  { 
+  string: navigator.vendor, 
+  subString: "iCab", 
+  identity: "iCab" 
+  }, 
+  { 
+  string: navigator.vendor, 
+  subString: "KDE", 
+  identity: "Konqueror" 
+  }, 
+  { 
+  string: navigator.userAgent, 
+  subString: "Firefox", 
+  identity: "Firefox" 
+  }, 
+  { 
+  string: navigator.vendor, 
+  subString: "Camino", 
+  identity: "Camino" 
+  }, 
+  {  
+  /* For Newer Netscapes (6+) */ 
+  string: navigator.userAgent, 
+  subString: "Netscape", 
+  identity: "Netscape" 
+  }, 
+  { 
+  string: navigator.userAgent, 
+  subString: "MSIE", 
+  identity: "Internet Explorer", 
+  versionSearch: "MSIE" 
+  }, 
+  { 
+  string: navigator.userAgent, 
+  subString: "Gecko", 
+  identity: "Mozilla", 
+  versionSearch: "rv" 
+  }, 
+  {  
+  /* For Older Netscapes (4-) */ 
+  string: navigator.userAgent, 
+  subString: "Mozilla", 
+  identity: "Netscape", 
+  versionSearch: "Mozilla" 
+  } 
+  ], 
+  dataOS : [ 
+  { 
+  string: navigator.platform, 
+  subString: "Win", 
+  identity: "Windows" 
+  }, 
+  { 
+  string: navigator.platform, 
+  subString: "Mac", 
+  identity: "Mac" 
+  }, 
+  { 
+  string: navigator.userAgent, 
+  subString: "iPhone", 
+  identity: "iPhone/iPod" 
+  }, 
+  { 
+  string: navigator.platform, 
+  subString: "Linux", 
+  identity: "Linux" 
+  } 
+  ] 
+
+};
 var counter = 0;
 $(window).scroll(function() {
 	if ($(window).scrollTop() > 320) {
@@ -47,6 +163,7 @@ $(window).scroll(function() {
 	}
 });
 $(document).ready(function() {
+	BrowserDetect.init();
 	if ($(window).width() > 829) {
 		$(".dropup").css("right", ($(".content_wrapper").offset().left + 12 + "px"));
 		$(".dry_chartering_description p span").html("<br/>");
@@ -66,9 +183,15 @@ $(document).ready(function() {
 	if ($(window).width() > 817) {
 		$("footer p span").html("<br/>");
 	} else $("footer p span").html("");
-	if ($(window).width() < (650 - getScrollbarWidth())) {
-		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
-	} else $("div.search_options").css("marginLeft", "");
+	if (BrowserDetect.browser != "MSIE" || BrowserDetect.browser != "Internet Explorer") {
+		if ($(window).width() < 650) {
+			$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+		} else $("div.search_options").css("marginLeft", "");
+	} else {
+		if ($(window).width() < (650 - getScrollbarWidth())) {
+			$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+		} else $("div.search_options").css("marginLeft", "");
+	}
 	if (isRetina() && isApple()) {
 		$(".fa-chevron-right").css("left", "-4px");
 		if ($(window).width() < (650 - getScrollbarWidth())) {
@@ -91,12 +214,18 @@ $(window).resize(function() {
 		$(".dropup").css("right", "20px");
 		$(".dry_chartering_description p span").html("");
 	}
-	if ($(window).width() < (650 - getScrollbarWidth())) {
-		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
-		if (isRetina()) {
-			$(".dry_chartering_description p span").html("");
-		}
-	} else $("div.search_options").css("marginLeft", "");
+	if (BrowserDetect.browser != "MSIE" || BrowserDetect.browser != "Internet Explorer") {
+		if ($(window).width() < 650) {
+			$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+		} else $("div.search_options").css("marginLeft", "");
+	} else {
+		if ($(window).width() < (650 - getScrollbarWidth())) {
+			$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+			if (isRetina()) {
+				$(".dry_chartering_description p span").html("");
+			}
+		} else $("div.search_options").css("marginLeft", "");
+	}
 	if ($(window).width() > 649) {
 		$("header p span").html("<br/>");
 	} else {
@@ -172,4 +301,3 @@ $("button.change_values").click(function() {
 	from_selector.val(to_value);
 	to_selector.val(from_value);
 });
-
