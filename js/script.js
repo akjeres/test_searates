@@ -68,12 +68,12 @@ $(document).ready(function() {
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
 		if (isRetina() && isApple()) {
 			$(".change_values").css({
-    			backgroundColor: "red",
     			top: "-45px",
-    			left: "-49px"
+    			left: "-49px",
+    			padding: "0"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test19");
+			alert("Test20");
 		}
 	}
 });
