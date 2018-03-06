@@ -428,7 +428,7 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
         z-index: 100 !important;
         height: 90px !important;
    }
-   .more button svg {
+   .more button svg.svg-inline--fa.fa-chevron-right {
         left: -8px;
         position: relative;
     }
