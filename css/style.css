@@ -30,7 +30,7 @@ header p {
     margin: 14px 10% 16px 10%;
     line-height: 17.5px;
 }
-@media (min-width: 649px) {
+@media (min-width: 650px) {
     header {
         height: 543px;
         display: -webkit-box;
@@ -391,6 +391,10 @@ div.quotation input:-moz-placeholder           {color:#444444; font-size: 13px}/
 div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    
 @media (max-width: 649px) {
+    header p {
+        max-width: 300px;
+        margin: 14px auto 16px auto;
+    }
    .quotation.quotation_bottom {
     padding: 4px 0;
    }
