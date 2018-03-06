@@ -75,10 +75,10 @@ $(document).ready(function() {
 			});
 			$(".search-row .input-group-btn").css({
 				position: "relative",
-				left: "20px"
+				left: "219px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test25");
+			alert("Test26");
 		}
 	}
 });
