@@ -390,7 +390,7 @@ div.quotation input::-moz-placeholder          {color:#444444; font-size: 13px}/
 div.quotation input:-moz-placeholder           {color:#444444; font-size: 13px}/* Firefox 18- */
 div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    
-@media (max-width: 650px) {
+@media (max-width: 649px) {
    .quotation.quotation_bottom {
     padding: 4px 0;
    }
@@ -415,24 +415,23 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
     left: 12px; 
    }
 }
-@media
-   only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 650px),
-   only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 650px),
-   only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 650px),
-   only screen and (        min-device-pixel-ratio: 2) and (max-width: 650px),
-   only screen and (                min-resolution: 192dpi) and (max-width: 650px),
-   only screen and (                min-resolution: 2dppx) and (max-width: 650px) { 
+/*@media
+   only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 649px),
+   only screen and (        min-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (                min-resolution: 192dpi) and (max-width: 649px),
+   only screen and (                min-resolution: 2dppx) and (max-width: 649px) { 
    button.btn.btn-default.change_values {
-        position: absolute !important;
-        right: 0px;
+        position: static;
         z-index: 100 !important;
         height: 90px !important;
    }
    .more button svg.svg-inline--fa.fa-chevron-right {
-        left: -6px;
+        left: -4px;
         position: relative;
     }
-}
+}*/
 /*Quote Search*/
 
 /*Articles Group*/

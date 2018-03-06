@@ -12,6 +12,21 @@ function isRetina() {
  
 	return false;
 };
+function getScrollbarWidth() {
+  const outer = document.createElement('div');
+  const inner = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  outer.style.width = '100px';
+  inner.style.width = '100%';
+  outer.appendChild(inner);
+  document.body.appendChild(outer);
+  const widthWithoutScrollbar = outer.offsetWidth;
+  outer.style.overflow = 'scroll';
+  const widthWithScrollbar = inner.offsetWidth;
+  document.body.removeChild(outer);
+
+  return (widthWithoutScrollbar - widthWithScrollbar);
+}
 var counter = 0;
 $(window).scroll(function() {
 	if ($(window).scrollTop() > 320) {
@@ -31,11 +46,16 @@ $(document).ready(function() {
 	if ($(window).scrollTop() > 320) {
 		$(".dropup").fadeIn("slow");
 	} else $(".dropup").fadeOut("fast");
-	if ($(window).width() < 635) { //has to be changed
+	if ($(window).width() < (650 - getScrollbarWidth())) {
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
 		if (isRetina()) {
 			$(".dry_chartering_description p span").html("");
+			$(".change_values").css({
+				position: "absolute",
+    			right: 0
+			});
 		}
+		alert("Retina? " + isRetina());
 	}
 	if ($(window).width() > 550) {
 		$("header p span").html("<br/>");
@@ -43,10 +63,6 @@ $(document).ready(function() {
 	if ($(window).width() > 817) {
 		$("footer p span").html("<br/>");
 	} else $("footer p span").html("");
-
-	//retina test code
-
-	alert(isRetina());
 });
 $(window).resize(function() {
 	if ($(window).width() > 829) {
@@ -56,8 +72,11 @@ $(window).resize(function() {
 		$(".dropup").css("right", "20px");
 		$(".dry_chartering_description p span").html("");
 	}
-	if ($(window).width() < 635) {
+	if ($(window).width() < (650 - getScrollbarWidth())) {
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+		if (isRetina()) {
+			$(".dry_chartering_description p span").html("");
+		}
 	} else $("div.search_options").css("marginLeft", "");
 	if ($(window).width() > 550) {
 		$("header p span").html("<br/>");
