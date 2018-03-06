@@ -71,10 +71,11 @@ $(document).ready(function() {
 		if (isRetina() && isApple()) {
 			$(".change_values").css({
     			top: "-45px",
-    			backgroundColor: "red"
+    			backgroundColor: "red",
+    			left: "20px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test23");
+			alert("Test24");
 		}
 	}
 });
