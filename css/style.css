@@ -432,10 +432,19 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    button.request_quote:hover,
    button.quote_request:hover,
    div.nearest_city.input-group span.input-group-btn button:hover
-
     {
-    box-shadow: inset 0 10px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
    }
+   button.btn.btn-default.change_values:active,
+   button.btn.btn-default.search_button:active,
+   button.adv_search:active,
+   button.request_quote:active,
+   button.quote_request:active,
+   div.nearest_city.input-group span.input-group-btn button:active
+    {
+    box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+   }
+
 }
 /*Quote Search*/
 
@@ -823,6 +832,9 @@ div.nearest_city input:-ms-input-placeholder      {color:#000 !important;}
     font-size: 12px;
     padding-right: 10px;
     z-index: 0 !important;
+    border-radius: 0;
+    position: relative;
+    left: 1px;
 }
 @media (max-width: 830px) {
     img.amine {
