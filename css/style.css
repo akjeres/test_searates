@@ -457,7 +457,9 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
 }
 .more button i {
     font-size: 18px;
-    left: 2px;
+}
+.more button svg {
+    left: 1px;
     position: relative;
 }
 .ordinary_cargo_row {
