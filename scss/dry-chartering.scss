@@ -1,0 +1,44 @@
+@import "variables";
+
+article.dry_chartering {
+    color: $dryCharteringColor;
+    padding-bottom: 20px;
+}
+article.dry_chartering img {
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+}
+div.dry_chartering_photos {
+    position: relative;
+    left: 9px;
+    top: 73px;
+}
+img.disembarkation {
+   position: relative;
+   left: 1px;
+   top: 36px;
+}
+div.dry_chartering_description {
+    padding: 0 0 0 28px;
+}
+.dry_chartering h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 24px 0 18px 0;
+}
+.dry_chartering p {
+    line-height: 17px;
+    margin-bottom: -1px;
+}
+@media (max-width: 800px) and (min-width: 768px) {
+    div.dry_chartering_photos {
+        left: -1px;
+    }
+}
+@media (max-width: 767px) {
+    div.dry_chartering_description {
+        padding: 0 15px;
+    }
+    .dry_chartering_description h2 {
+        text-align: center;
+    }
+}

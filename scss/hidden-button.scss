@@ -1,0 +1,175 @@
+@import "variables";
+
+@mixin buttonShadowStraight($width, $color) {
+    box-shadow: $width $width $width $color !important;
+}
+@mixin buttonShadowReverse($width, $color) {
+    box-shadow: $width $width*(-1) $width $color;
+}
+.dropup {
+    display: none;
+    position: fixed;
+    bottom: 26px;
+    margin: 0;
+    padding: 0;
+    @include circle($hiddenButtonPrimarySize);
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    transform: rotate(180deg);
+}
+input[type=checkbox]{
+    display: none;
+}
+label{
+    box-sizing: border-box;
+    display: block;
+    @include circle($hiddenButtonPrimarySize);
+    background-color: $hiddenButtonColor;
+    cursor: pointer;
+    border: 1px solid #fff;
+    user-select: none;
+    margin-bottom: 0;
+    z-index: 9;
+}
+.button_span {
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: 0 auto 3px auto;
+}
+.button_span.top {
+    margin-top: 22px;
+}
+
+ul.hidden_button {
+    position: absolute;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+    margin:0;
+    padding:0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+
+ul.hidden_button li {
+    @include circle($hiddenButtonSecondarySize);
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    @include buttonShadowReverse(3px, $hiddenButtonShadowColor);
+    position: absolute;
+}
+li.call {
+    background-color: rgb(0, 195, 255);
+    transform: rotate(-90deg);
+    z-index: 10;
+}
+ul.hidden_button a {
+    color: #fff;
+    text-decoration: none;
+}
+i.fas.fa-phone::before {
+    position: relative;
+    top: 22px;
+    left: 26px;
+}
+svg.svg-inline--fa.fa-phone {
+    position: relative;
+    top: 22px;
+    left: 26px;
+}
+li.dollar {
+    background-color: rgb(92, 184, 92);
+    position: absolute;
+    @include buttonShadowStraight(3px, $hiddenButtonShadowColor);
+    font-size: 40px;
+    z-index: 8;
+    transform: rotate(180deg);
+}
+i.fas.fa-dollar-sign::before {
+    position: relative;
+    left: 26px;
+    top: 12px;
+ }
+svg.svg-inline--fa.fa-dollar-sign {
+    position: relative;
+    left: 26px;
+    top: 12px;
+}
+
+input[type=checkbox]:checked ~ label {
+    background-color: $hiddenButtonColor;
+    @include circle($hiddenButtonPrimarySize);
+}
+input[type=checkbox]:checked ~ label span.button_span.top {
+    transform: rotate(45deg);
+    margin-top: 0;
+    animation: clock-wise 0.25s ease-in-out;
+    position: relative;
+    top: 27px;
+}
+input[type=checkbox]:checked ~ label span.button_span.center {
+    display: none;
+}
+input[type=checkbox]:checked ~ label span.button_span.bottom {
+    transform: rotate(-45deg);
+    animation: counterclock-wise 0.25s ease-in-out;
+    position: relative;
+    top: 22px;
+}
+
+@keyframes counterclock-wise {
+    from {
+        transform: rotate(0deg);
+        top: 0;
+    }
+    to {
+        transform: rotate(-45deg);
+        top: 22px;
+    }
+}
+@keyframes clock-wise {
+    from {
+        transform: rotate(0deg);
+        top: 0;
+    }
+    to {
+        transform: rotate(45deg);
+        top: 27px;
+    }
+}
+
+
+input[type=checkbox]:checked ~ ul {
+    display: block; 
+}
+.hidden_button span {
+    display: none;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: $hiddenButtonMessageColor;
+    position: absolute;
+    right: 84px;
+    top: 22px;
+    width: 190px;
+    text-align: center;
+}
+.hidden_button span.menu_call {
+    transform: rotate(-90deg);
+    top: 118px;
+    right: -10px;
+    width: 100px;
+}
+.hidden_button span::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -12px;
+    @include triangleRight(6px, $hiddenButtonMessageColor);
+}

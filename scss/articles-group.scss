@@ -1,0 +1,156 @@
+@import "variables";
+
+
+/*Articles Group*/
+.articles_group {
+    line-height: 16px;
+    font-size: 14px;
+}
+.articles_group h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 20px;  
+}
+.articles_group p {
+    margin-bottom: 4px;
+}
+.more p span {
+    position: relative;
+    left: 18px;
+    overflow: hidden;
+}
+.more button {
+    border: none !important;
+    @include circle(28px);
+}
+
+.blue .more button:hover {
+    background-color: rgb(221, 221, 221) !important;
+}
+.blue .more button:active, .light .more button:hover {
+   background-color: rgb(121, 121, 121) !important; 
+}
+.light .more button:active {
+   background-color: rgb(21, 21, 21) !important; 
+}
+
+.blue .more button {
+    background-color: #fff;
+    color: #48a7eb;
+}
+.light .more button {
+    background-color: #000;
+    color: #fff;
+}
+.more button i {
+    font-size: 18px;
+}
+.more button svg {
+    left: 1px;
+    position: relative;
+}
+.ordinary_cargo_row {
+    padding: 27px 16px 31px 23px;
+}
+.ordinary_cargo_photo, .food-grade_cargo_photo {
+    float: left;
+    margin-right: 28px;
+}
+@media (max-width: 805px) {
+    .ordinary_cargo_photo {
+        margin-right: 18px;
+    }
+    .ordinary_cargo_row p {
+        margin-bottom: 0;
+    }
+}
+
+.hazardous_cargo_row {
+    @include centralbackground("../images/hazardous_cargo.png");
+    background-clip: border-box;
+    padding: 20px 32px 18px 32px;
+}
+.hazardous_cargo_description {
+    width: 436px;
+    line-height: 17px;
+}
+.hazardous_cargo_description p.description,
+.food-grade_cargo_description p.description {
+    margin-bottom: 26px
+}
+@media (max-width: 767px) {
+    .hazardous_cargo_row {
+        background: #48a7eb;
+    }
+    .hazardous_cargo_description {
+        width: 100%;
+    }
+}
+
+.food-grade_cargo_row {
+    padding: 30px 30px 25px 22px;
+}
+@media (max-width: 767px) {
+    .food-grade_cargo_row {
+        padding: 22px 30px 25px 23px;
+    }
+}
+.food-grade_cargo_photo {
+    margin-right: 30px;
+    position: relative;
+    top: -8px;
+}
+.food-grade_cargo_description p.description {
+    line-height: 17px;
+    margin-bottom: 28px;
+}
+.rare_cargo_row {
+	padding: 14px 22px 17px 27px;
+}
+.rare_cargo_description {
+    width: 460px;
+    float: left;
+    margin-right: 24px;
+}
+
+.rare_cargo_description p.description {
+    line-height: 17px;
+    padding-top: 3px;
+    margin-bottom: 2px;
+}
+.rare_cargo_description .more p {
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.rare_cargo_photo img {
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+    position: relative;
+    top: 22px;
+}
+@media (min-width: 768px) and (max-width: 829px) {
+   .rare_cargo_description {
+        width: 400px;
+    }
+    .rare_cargo_photo img {
+        left: 0px;
+    }
+}
+@media (max-width: 767px) {
+    .rare_cargo_description {
+        width: 100%;
+        float: none;
+    }
+    .rare_cargo_description .more p {
+        margin-bottom: 0;
+    }
+}
+.light {
+    background-color: #fff;
+    color: #000;
+}
+.blue {
+    background-color: transparent;
+    color: #fff;
+}

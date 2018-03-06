@@ -1,0 +1,15 @@
+*.json
+*.*~
+gulpfile.js
+node_modules/
+css/footer.css
+css/header.css
+css/hidden-button.css
+css/main.css
+css/variables.css
+css/articles-group.css
+css/carousel.css
+css/dry-chartering.css
+css/quotation-needs.css
+css/quote-search.css
+css/support.css

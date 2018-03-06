@@ -24,16 +24,16 @@ function isApple() {
 	else return false;
 }
 function getScrollbarWidth() {
-  const outer = document.createElement('div');
-  const inner = document.createElement('div');
+  var outer = document.createElement('div');
+  var inner = document.createElement('div');
   outer.style.visibility = 'hidden';
   outer.style.width = '100px';
   inner.style.width = '100%';
   outer.appendChild(inner);
   document.body.appendChild(outer);
-  const widthWithoutScrollbar = outer.offsetWidth;
+  var widthWithoutScrollbar = outer.offsetWidth;
   outer.style.overflow = 'scroll';
-  const widthWithScrollbar = inner.offsetWidth;
+  var widthWithScrollbar = inner.offsetWidth;
   document.body.removeChild(outer);
 
   return (widthWithoutScrollbar - widthWithScrollbar);
@@ -41,14 +41,10 @@ function getScrollbarWidth() {
 var counter = 0;
 $(window).scroll(function() {
 	if ($(window).scrollTop() > 320) {
-		if ($(".owl-carousel_wrapper").offset().top-26 - $(window).height()
-			&& $(".owl-carousel_wrapper").offset().top+222 - $(window).height()) {
-			$(".dropup").fadeIn("slow");
-		}
+		$(".dropup").fadeIn("slow");
 	} else {
 		$(".dropup").fadeOut("fast");
 	}
-	console.log($(window).scrollTop());
 });
 $(document).ready(function() {
 	if ($(window).width() > 829) {

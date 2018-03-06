@@ -1,0 +1,125 @@
+@import "variables";
+
+div.support {
+    padding: 35px 24px 26px 24px;
+}
+img.amine {
+    padding: 0 25px 0 0 ;
+    margin-bottom: 5px;
+}
+.questions_info {
+    margin-left: -8px;
+    padding-left: 0;
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 18px;
+}
+.questions_info p {
+    margin-bottom: 0px;
+}
+.questions_info p.small {
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.questions_info a {
+    font-size: 14px;
+    color: #fff !important;
+    padding: 8px 12px 8px 16px;
+    background-color: $primaryBackgroundColor;
+    margin-left: 8px;
+}
+div.nearest_wrapper, div.questions_wrapper {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 60px 1px rgba(0,0,0,0.5);
+}
+div.nearest_wrapper {
+    padding: 24px 28px 36px 24px;
+}
+div.nearest_wrapper p {
+    margin-bottom: 0;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+div.nearest_wrapper p.searates_office { 
+    margin-bottom: 30px;
+}
+div.nearest_city  {
+    height: 27px;
+    width: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.nearest_city {
+    background-color: #fff;
+    border: none;
+}
+div.nearest_city .form-control {
+    color: #000;
+    font-size: 12px;
+    padding: 0 12px;
+    border: none;
+    height: 28px;
+    z-index: 0 !important;
+}
+
+div.nearest_city input {
+	@include placeholder(#000 !important, 12px)
+}
+.nearest_city input {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.nearest_city span.input-group-btn button {
+    height: 28px;
+    width: 31px;
+    border: 0;
+    background-color: #fff !important;
+    font-size: 12px;
+    padding-right: 10px;
+    z-index: 0 !important;
+    border-radius: 0;
+}
+@media (max-width: 830px) {
+    img.amine {
+        width: 95px;
+        height: 147px;
+        padding-right: 0px;
+    }
+}
+@media (max-width: 768px) {
+    div.support {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    div.questions_wrapper {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        
+    }
+    div.questions_info {
+        margin-left: 0 !important;
+        height: 127px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    div.questions_wrapper img {
+        display: none;
+    }
+    .questions_wrapper p, .questions_wrapper a {
+        margin-left: 0;
+    }
+}
+@media (max-width: 649px) {
+    div.nearest_city span.input-group-btn {
+        width: 31px;
+        position: absolute;
+        right: 1px;
+    }
+    div.nearest_city {
+        height: 30px;
+    }
+}

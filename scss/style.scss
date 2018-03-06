@@ -1,0 +1,25 @@
+@import "variables";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primaryBackgroundColor;
+    @include primaryFont;
+}
+.content_wrapper {
+    @include wrapper($primaryWidth);
+}
+/*Header*/
+@import "header";
+/*Main*/
+@import "main";
+/*Footer*/
+@import "footer";
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}

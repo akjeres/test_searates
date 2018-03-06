@@ -1,0 +1,31 @@
+.quotation_needs {
+    background-color: #fff;
+    padding-bottom: 33px;
+    text-align: center;
+}
+.quotation_needs h2 {
+    padding-top: 27px;
+    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+.quotation_needs p {
+    margin-bottom: 14px;
+}
+.quotation_needs button.quote_request {
+    border: none;
+    background-color: #fe9518;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 0;
+    padding: 10px 17px 8px 17px;
+    margin-top: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 17px;
+}
+button.quote_request:hover {
+    background-color: #FFB052;
+}
+button.quote_request:active {
+    background-color: #BF833D;
+}

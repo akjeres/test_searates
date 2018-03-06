@@ -1,0 +1,50 @@
+$primaryWidth: 830px;
+$primaryBackgroundColor: #48a7eb;
+$headerPrimaryColor: #fff;
+$hiddenButtonColor: #ff9115;
+$hiddenButtonMessageColor: rgba(51, 51, 51, 0.5);
+$hiddenButtonShadowColor: rgba(181,181,181, 0.5);
+$hiddenButtonPrimarySize: 59px;
+$hiddenButtonSecondarySize: 80px;
+$touchButtonShadowColor: #000;
+$inputPrimaryColor: #444444;
+$dryCharteringColor: #fff;
+$carouselColor: #000;
+$footerPrimaryColor: #fff;
+
+@mixin centralbackground($path) {
+	background: 50% 50% url($path) no-repeat;
+}
+@mixin wrapper($width) {
+	max-width: $width;
+    margin: 0 auto;
+    overflow: hidden;
+}
+@mixin primaryFont {
+	font: {
+		family: "Arial";
+	}
+}
+@mixin triangleRight($width, $color) {
+	border: $width solid transparent;
+    border-left: $width solid $color;
+}
+@mixin circle($diameter) {
+    width: $diameter;
+    height: $diameter;
+    border-radius: $diameter / 2;
+}
+@mixin placeholder($color, $size) {
+	&::-webkit-input-placeholder {color:$color; font-size: $size;}
+	&::-moz-placeholder          {color:$color; font-size: $size;}
+	&:-moz-placeholder           {color:$color; font-size: $size;}
+	&:-ms-input-placeholder      {color:$color; font-size: $size;}
+}
+@mixin touchButtons($width, $color) {
+	&:hover { 
+		box-shadow: inset 0 ($width - 2px) $width rgba($color, .125);
+	}
+	&:active {
+		box-shadow: inset 0 $width $width rgba($color, .25);
+	}
+}

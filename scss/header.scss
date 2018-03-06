@@ -1,0 +1,37 @@
+@import "variables";
+
+header {
+    color: $headerPrimaryColor;
+    display: block;
+    clear: both;
+    text-align: center;
+    @include centralbackground("../images/header_background.png");
+    background-clip: border-box;
+    padding-top: 20px;
+}
+header h1 {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 36px;    
+}
+header p {
+    margin: 14px 10% 16px 10%;
+    line-height: 17.5px;
+}
+@media (min-width: 650px) {
+    header {
+        height: 543px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header div.button_group_wrapper {
+        padding-bottom: 33px;
+    }
+}
+@media (max-width: 649px) {
+    header p {
+        max-width: 300px;
+        margin: 14px auto 16px auto;
+    }
+}

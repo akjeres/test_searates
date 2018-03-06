@@ -1,0 +1,162 @@
+@import "variables";
+
+div.quotation * {
+    border-radius: 0px;
+}
+div.quotation div.input-row, div.quotation button {
+    display: inline-block;
+}
+div.input-row {
+    padding: 0;
+    width: 477px;
+}
+div.dropdown.search_options {
+    padding: 0 4px;
+    width: 66px;
+}
+div.dropdown.search_options button {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+div.search-row {
+    width: 650px;
+    margin: 0 auto; 
+    display: block;
+    height: 45px;
+}
+.quotation.quotation_top {
+    display: block;
+    background-color: transparent;
+}
+.quotation.quotation_bottom {
+    background-color: #3faced;
+    display: block;
+    padding: 3px;
+    max-width: 658px;
+    margin: 0 auto;
+}
+.quotation.quotation_bottom div.button_group_wrapper {
+    padding: 0;
+}
+div.button_group_wrapper {
+    clear: both;
+    display: block;
+    text-align: center;
+    padding: 19px 0;
+}
+.button_group_wrapper button{
+    padding: 8px 15px 8px 13px;
+    font-weight: bolder;
+    color: #fff; 
+    font-size: 11px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    letter-spacing: 0.5px;    
+    font-weight: bold;
+}
+button.adv_search {
+    background-color: #63c2ee;
+    border-color: #78cef1;
+    margin-right: 6px;
+
+}
+button.request_quote {
+    background-color: #a0a0a0;
+    border-color: #c4b9b5;
+}
+button.search_button {
+    background-color: #fe9518 !important;
+    border: none;
+    color: #fff !important;
+    box-sizing: border-box;
+    height: 45px;
+    width: 107px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+div.quotation input {
+    height: 45px;
+    border: 0;
+    outline: none !important;
+    box-shadow: none;
+    padding-bottom: 11px;
+    padding-top: 22px;
+    font-stretch: semi-condensed;
+    color: $inputPrimaryColor;
+    box-sizing: border-box;
+}
+div.quotation button.change_values {
+    border: none;
+    height: 45px;
+    background-color: #fff !important;
+}
+.label_from, .label_to {
+    text-transform: uppercase;
+    color: #52a1d9;
+    width: 32px;
+    height: 8px;
+    position: absolute;
+    font-size: 8px;
+    font-weight: bold;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    line-height: 8px;
+    top: 12px;
+    cursor: default;
+    text-align: left !important;
+}
+.label_from {
+    left: 12px;
+}
+.label_to {
+    left: 275px;
+}
+div.quotation input {
+	@include placeholder($inputPrimaryColor, 13px);
+}
+   
+@media (max-width: 649px) {
+   .quotation.quotation_bottom {
+    padding: 4px 0;
+   }
+   .quotation .input-group {
+    display: block;
+   }
+   div.search-row, div.input-row {
+    width: 100%;
+    height: 100%;
+   }
+   div.input-row {
+    margin-bottom: 4px;
+   }
+   button.change_values {
+    position: absolute !important;
+    right: 0px;
+    z-index: 100 !important;
+    height: 90px !important;
+   }
+   .label_to {  
+    top: 55px;
+    left: 12px; 
+   }
+}
+@media
+   only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 649px),
+   only screen and (        min-device-pixel-ratio: 2) and (max-width: 649px),
+   only screen and (                min-resolution: 192dpi) and (max-width: 649px),
+   only screen and (                min-resolution: 2dppx) and (max-width: 649px) { 
+   button.btn.btn-default.change_values,
+   button.btn.btn-default.search_button,
+   button.adv_search,
+   button.request_quote,
+   button.quote_request,
+   div.nearest_city.input-group span.input-group-btn button
+    {
+    	@include touchButtons(5px, $touchButtonShadowColor);
+   }
+
+}

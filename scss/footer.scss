@@ -1,0 +1,41 @@
+@import "variables";
+
+footer {
+    color: $footerPrimaryColor;
+    padding: 18px 63px 20px 25px;
+    font-size: 10px;    
+    line-height: 12px;
+    display: block;
+    clear: both;
+}
+footer a {
+    color: $footerPrimaryColor !important;
+}
+footer ul li {
+    margin-bottom: 12px;
+}
+footer ul, footer ul li:last-child {
+    margin-bottom: 0;
+}
+footer ul li:first-child {
+    font-weight: bold;
+}
+footer div.footer_links {
+    padding-top: 12px;
+    padding-left: 8px;
+}
+ul.footer_services {
+    padding-left: 0;
+}
+footer div.copyrights {
+    padding-left: 40px;
+}
+
+@media (max-width: 767px) {
+    div.footer_links {
+        padding: 12px 15px 15px 15px;
+    }
+    div.footer_links ul {
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,48 @@
+@import "variables";
+$carouselDotsColor: lighten($carouselColor, 70.98);
+
+.owl-carousel_wrapper {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 23px 25px 19px 12px;
+    align-items: baseline;
+    text-align: center;
+}
+.owl-carousel_wrapper h3 {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: $carouselColor;
+    @include primaryFont;
+    font-weight: bold;  
+    text-shadow: 1.5px 2.598px 24px rgba($carouselColor, 0.75);
+}   
+div.owl-item img.cosco {
+   width: 75%;
+   margin-bottom: 16px;
+   margin-top: 2px;
+}
+div.owl-item img.kline {
+    width: 120%;
+    position: relative;
+    left: -50px;
+    top: 23px;
+}
+div.owl-item img.scf {
+    width: 95%;
+    margin-top: 18px;
+}
+div.owl-item img.scorpio {
+    width: 90%;
+    margin-top: 38px;
+}
+.owl-dot {
+    @include circle(8px);
+    background-color: $carouselDotsColor;
+    display: inline-block;
+    margin-left: 13px;
+}
+.owl-dot.active {
+    background-color: darken($carouselDotsColor, 40.78%);
+}
