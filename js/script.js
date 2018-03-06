@@ -71,7 +71,6 @@ $(document).ready(function() {
 	} else $("div.search_options").css("marginLeft", "");
 	if (isRetina() && isApple()) {
 		$(".fa-chevron-right").css("left", "-4px");
-		alert("Test33");
 		if ($(window).width() < (650 - getScrollbarWidth())) {
 			$(".change_values").css({
     			top: "-45px",

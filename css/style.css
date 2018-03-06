@@ -26,7 +26,6 @@ header h1 {
     font-size: 36px;    
 }
 header p {
-    /*width: 465px;*/
     margin: 14px 10% 16px 10%;
     line-height: 17.5px;
 }
@@ -134,7 +133,6 @@ li.call {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    /*top: -175px;*/
     z-index: 10;
 }
 ul.hidden_button a {
@@ -154,7 +152,6 @@ svg.svg-inline--fa.fa-phone {
 li.dollar {
     background-color: rgb(92, 184, 92);
     position: absolute;
-    /*top: -275px;*/
     box-shadow: 3px 3px 3px rgba(181,181,181, 0.5) !important;
     font-size: 40px;
     z-index: 8;
@@ -386,8 +383,8 @@ div.quotation button.change_values {
     left: 275px;
 }
 div.quotation input::-webkit-input-placeholder {color:#444444; font-size: 13px}
-div.quotation input::-moz-placeholder          {color:#444444; font-size: 13px}/* Firefox 19+ */
-div.quotation input:-moz-placeholder           {color:#444444; font-size: 13px}/* Firefox 18- */
+div.quotation input::-moz-placeholder          {color:#444444; font-size: 13px}
+div.quotation input:-moz-placeholder           {color:#444444; font-size: 13px}
 div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    
 @media (max-width: 649px) {
@@ -701,7 +698,6 @@ div.dry_chartering_description {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    /*padding: 23px 0 19px 0;*/
     padding: 23px 25px 19px 12px;
     -webkit-align-items: baseline;
     -moz-align-items: baseline;
@@ -753,11 +749,9 @@ div.owl-item img.scorpio {
 /*Support*/
 div.support {
     padding: 35px 24px 26px 24px;
-    /*background-color: #48a7eb;*/
 }
 img.amine {
     padding: 0 25px 0 0 ;
-    /*height: 147px;*/
     margin-bottom: 5px;
 }
 .questions_info {
@@ -821,8 +815,8 @@ div.nearest_city .form-control {
 }
 
 div.nearest_city input::-webkit-input-placeholder {color:#000 !important;}
-div.nearest_city input::-moz-placeholder          {color:#000 !important;}/* Firefox 19+ */
-div.nearest_city input:-moz-placeholder           {color:#000 !important;}/* Firefox 18- */
+div.nearest_city input::-moz-placeholder          {color:#000 !important;}
+div.nearest_city input:-moz-placeholder           {color:#000 !important;}
 div.nearest_city input:-ms-input-placeholder      {color:#000 !important;}
 .nearest_city span.input-group-btn button {
     height: 28px;
@@ -833,8 +827,6 @@ div.nearest_city input:-ms-input-placeholder      {color:#000 !important;}
     padding-right: 10px;
     z-index: 0 !important;
     border-radius: 0;
-    position: relative;
-    left: 1px;
 }
 @media (max-width: 830px) {
     img.amine {
@@ -882,7 +874,6 @@ div.nearest_city input:-ms-input-placeholder      {color:#000 !important;}
 /*Footer*/
 footer {
     color: #fff;
-    /*background-color: #48a7eb;*/
     padding: 18px 63px 20px 25px;
     font-size: 10px;    
     line-height: 12px;
