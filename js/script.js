@@ -33,6 +33,9 @@ $(document).ready(function() {
 	} else $(".dropup").fadeOut("fast");
 	if ($(window).width() < 635) { //has to be changed
 		$("div.search_options").css("marginLeft", ($(window).width() - 173)/2 + "px");
+		if (isRetina()) {
+			$(".dry_chartering_description p span").html("");
+		}
 	}
 	if ($(window).width() > 550) {
 		$("header p span").html("<br/>");
