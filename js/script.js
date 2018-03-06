@@ -71,10 +71,10 @@ $(document).ready(function() {
 			$(".change_values").css({
     			backgroundColor: "",
     			top: "-45px",
-    			left: ($(window).width()-101) + "px"
+    			left: ($(window).width()*(-1)+52) + "px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test14");
+			alert("Test15");
 		}
 	}
 });
