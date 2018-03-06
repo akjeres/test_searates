@@ -422,9 +422,12 @@ div.quotation input:-ms-input-placeholder      {color:#444444; font-size: 13px}
    only screen and (        min-device-pixel-ratio: 2),
    only screen and (                min-resolution: 192dpi),
    only screen and (                min-resolution: 2dppx) { 
-      body {
-        display: none;
-    }
+      button.change_values {
+        position: absolute !important;
+        right: 0px;
+        z-index: 100 !important;
+        height: 90px !important;
+   }
 }
 /*Quote Search*/
 
