@@ -69,12 +69,12 @@ $(document).ready(function() {
 		if (isRetina() && isApple()) {
 			$(".dry_chartering_description p span").html("");
 			$(".change_values").css({
-    			backgroundColor: "dummy",
+    			backgroundColor: "red",
     			top: "-45px",
-    			left: "0"
+    			left: "102px"
 			});
 			$(".fa-chevron-right").css("left", "-4px");
-			alert("Test16");
+			alert("Test17");
 		}
 	}
 });
