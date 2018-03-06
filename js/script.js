@@ -62,7 +62,7 @@ $(document).ready(function() {
 		if (isRetina() && isApple()) {
 			$(".dry_chartering_description p span").html("");
 			$(".change_values").css({
-    			left: ($(window).width() - 204) + "px",
+    			left: 10 + "px",
     			top: "-45px"
 			});
 		}
